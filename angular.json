@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "witc"
+  "defaultProject": "witc",
+  "cli": {
+    "analytics": false
+  }
 }
