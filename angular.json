@@ -21,7 +21,10 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/witc.jpg"
+              
+
             ],
             "styles": [
               "src/styles.css",

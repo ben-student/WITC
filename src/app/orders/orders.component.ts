@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl ,FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-orders',
@@ -6,10 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  
+  orderForm;
+  
+  
 
-  constructor() { }
+
+ 
+  constructor(private fb : FormBuilder) {
+
+    this.orderForm = this.fb.group({
+      name: '',
+      addres: ''
+    });
+   }
 
   ngOnInit(): void {
+    
+    
+  }
+
+
+  sendOrder(orderData){
+
+
+    console.log(orderData.name);
   }
 
 }
