@@ -1,23 +1,12 @@
 node {
-
     
-    agent {
-        docker { image 'node:7-alpine' }
-    }
+    checkout scm
 
-    stages{
-        stage('test'){
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcredentials') {
 
-        
-            checkout scm
+        def customImage = docker.build("bendupont/WITC").inside{}
 
-            docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcredentials') {
-
-                def customImage = docker.build("bendupont/WITC").inside{}
-
-                customImage.push()
-            }
-        }
+        customImage.push()
     }
         
 }
