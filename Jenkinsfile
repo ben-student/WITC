@@ -3,7 +3,7 @@ node {
 
     docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcredentials') {
 
-        def customImage = docker.build("bendupont/WITC")
+        def customImage = docker.build("bendupont/WITC").inside{}
 
         customImage.push()
     }
