@@ -6,5 +6,6 @@ node {
         def customImage = docker.build("bendupont/WITC")
 
         customImage.push()
+    }
         
 }
