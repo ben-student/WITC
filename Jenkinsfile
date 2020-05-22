@@ -1,17 +1,14 @@
-pipeline {
+node {
+    checkout scm
 
-    agent{
-        dockerfile true
-    } 
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcredentials') {
 
-    stages {
-        stage('test'){
-            steps{
-                echo 'Testing this build'
-                
-            }
-        }
+        def customImage = docker.build("benstudent/witc_backend")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
     }
+}
+
 
   
-}
