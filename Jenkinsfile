@@ -1,12 +1,17 @@
-node {
-    
-    checkout scm
+pipeline {
 
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcredentials') {
+    agent{
+        dockerfile true
+    } 
 
-        def customImage = docker.build("bendupont/WITC").inside{}
-
-        customImage.push()
+    stages {
+        stage('test'){
+            steps{
+                echo 'Testing this build'
+                
+            }
+        }
     }
-        
+
+  
 }
