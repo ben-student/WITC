@@ -7,6 +7,8 @@ COPY . .
 
 RUN npm install
 
+CMD ["ng" , "serve"]
+
 #RUN npm run build --prod
 
 #stage 2
