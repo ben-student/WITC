@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl ,FormBuilder } from '@angular/forms';
+import { MailServiceService } from '../mail-service.service';
 
 @Component({
   selector: 'app-orders',
@@ -14,11 +15,12 @@ export class OrdersComponent implements OnInit {
 
 
  
-  constructor(private fb : FormBuilder) {
+  constructor(private fb : FormBuilder, private ms : MailServiceService) {
 
     this.orderForm = this.fb.group({
-      name: '',
-      addres: ''
+      email: '',
+      subject: '',
+      text: ''
     });
    }
 
@@ -31,7 +33,8 @@ export class OrdersComponent implements OnInit {
   sendOrder(orderData){
 
 
-    console.log(orderData.name);
+   this.ms.sendMail(orderData);
+
   }
 
 }
