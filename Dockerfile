@@ -1,5 +1,5 @@
 #stage 1
-FROM node:10 
+FROM node:10  as node
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm run build --prod
 
 #stage 2
 FROM nginx:alpine
-COPY --from=node:10 /app/dist/witc /usr/share/nginx/html
+COPY --from=node /app/dist/witc /usr/share/nginx/html
 
 
 
