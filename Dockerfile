@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . . 
 
 RUN npm install
-
+#fn,dknfknqskfnqsknf
 
 RUN npm run build --prod
 
