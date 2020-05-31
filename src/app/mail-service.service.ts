@@ -17,7 +17,7 @@ export class MailServiceService {
     .set("Acces-Control-Allow-Methods" , "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization" )
     .set("Content-Type" ,"application/json; charset=utf-8");
 
-    
+    //een commit voor de test
     
     return this._http.post("http://localhost:3000/sendmail", body, { headers : headers}).subscribe(
       res => {
