@@ -1,11 +1,12 @@
 #stage 1
-FROM node:latest as node
+FROM node:10  as node
 
 WORKDIR /app
 
 COPY . . 
 
 RUN npm install
+#fn,dknfknqskfnqsknf
 
 RUN npm run build --prod
 
