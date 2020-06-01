@@ -1,0 +1,55 @@
+---
+
+- name: "ansible deployment enviroment"
+  hosts: webservers
+  remote_user: root
+  become: yes
+  tasks:
+    - name: install docker
+      command: apt install docker
+      ignore_errors: yes
+
+    - name: stop existing Backend container
+      command: docker stop Backend
+      ignore_errors: yes
+
+    - name: stop exisiting WITC container
+      command: docker stop WITC
+      ignore_errors: yes
+
+    - name: remove existing Backend container
+      command: docker rm Backend
+      ignore_errors: yes
+
+    - name: remove existing WITC container 
+      command: docker rm WITC
+      ignore_errors: yes
+
+    - name: remove existing WITC image
+      command: docker image rm -f benstudent/witc:latest
+    
+    - name: remove existing Backend image
+      command: docker image rm -f benstudent/witc_backend:latest
+
+    - name: logout of dockerhub
+      command: docker logout
+
+    - name: login to dockerhub
+      command: docker login -u benstudent -p *******
+      ignore_errors: yes
+    
+    - name: pull latest WITC image from dockerhub
+      command: docker pull benstudent/witc:latest
+
+    - name: pull latest Backend image from dockerhub
+      command: docker pull benstudent/witc_backend:latest
+
+    - name: run docker image WITC on port 80:80
+      command: docker run --name WITC --restart=always -d -p 80:80 benstudent/witc:latest
+    
+    - name: run docker image Backend on port 3000:3000
+      command: docker run --name Backend --restart=always -d -p 3000:3000 benstudent/witc_backend:latest
+
+
+
+
