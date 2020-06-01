@@ -1,3 +1,7 @@
+# This is the repo where all the configuraration , playbook , hosts files will be stored. I will also include a link to to the backend repo and give reading permissions to sven maes & jan guldentops
+
+link to backend https://github.com/ben-student/WITC-Backend
+
 # Witc
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
