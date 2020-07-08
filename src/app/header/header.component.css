@@ -2,3 +2,9 @@ img{
     border-radius: 1em;
     opacity: 95%;
 }
+
+.nav-link{
+    margin-left: 6em;
+    
+    font-family: 'Architects Daughter', cursive;
+}
