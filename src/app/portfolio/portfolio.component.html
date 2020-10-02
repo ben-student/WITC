@@ -1,4 +1,4 @@
-<div class="conatainer">
+<!-- <div class="conatainer">
   <div class="row">
     <div class="col-sm">
       <th *ngFor="let i of img ">
@@ -7,4 +7,96 @@
       </th>
     </div>
   </div>
-</div>
+</div> -->
+
+
+<!-- <mat-grid-list cols="3" rowHeight="1000px">
+  <mat-grid-tile *ngFor="let i of img">
+    <img src="assets/{{i}}" height="500em" width="250em">
+  </mat-grid-tile>
+ 
+</mat-grid-list> -->
+
+<!-- <mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <div class="card" style="width: 18rem;">
+      <img src="assets/BADKAMER1.jpg" class="card-img-top" height="420em" >
+      <div class="card-body">
+        <h3 class="card-title">Badkamer</h3>
+        <p class="card-text">{{badKamerTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('BADKAMER')">Meer foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile> -->
+
+
+<!-- <mat-grid-tile>
+    <div class="card" style="width: 18rem;">
+      <img src="assets/KASTKAMERSAM5.jpg" class="card-img-top" height="420em" >
+      <div class="card-body">
+        <h3 class="card-title">KleerKast</h3>
+        <p class="card-text">{{kleerKastTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('KASTKAMERSAM5')">Meer foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list> -->
+
+
+<mat-grid-list [cols]="cols" [rowHeight]="rows" (window:resize)="onResize($event)">
+  <mat-grid-tile>
+    <div class="card">
+      <img src="assets/KASTKAMERSAM5.jpg" class="card-img-top" >
+      <div class="card-body">
+        <h3 class="card-title">KleerKast</h3>
+        <p class="card-text">{{kleerKastTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('KASTKAMERSAM5')">Meer
+          foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="card">
+      <img src="assets/BADKAMER1.jpg" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">Badkamer</h3>
+        <p class="card-text">{{badKamerTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('BADKAMER')">Meer
+          foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="card">
+      <img src="assets/LAMP1.jpg" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">Lamp</h3>
+        <p class="card-text">{{lampTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('LAMP')">Meer foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+
+    <div class="card" >
+      <img src="assets/NACHTKASTSAM1.jpg" class="card-img-top"  >
+      <div class="card-body">
+        <h3 class="card-title">Nachtkastje</h3>
+        <p class="card-text">{{nachtKastTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('NACHTKASTSAM')">Meer foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="card">
+      <img src="assets/STOEL5.jpg" class="card-img-top" >
+      <div class="card-body">
+        <h3 class="card-title">Stoel</h3>
+        <p class="card-text">{{StoelTxt}}</p>
+        <a routerLink="/about" routerLinkActive="active" class="btn btn-primary" (click)="update('STOEL')">Meer foto's</a>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>6</mat-grid-tile>
+</mat-grid-list>
