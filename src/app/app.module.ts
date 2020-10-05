@@ -11,6 +11,7 @@ import { NgxGlideModule } from 'ngx-glide';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { LibraryComponent } from './library/library.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HeaderComponent,
     AboutComponent,
     PortfolioComponent,
+    LibraryComponent,
 
   ],
   imports: [

@@ -6,8 +6,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MailServiceService {
 
+
+  _PassedVar;
   constructor(private _http : HttpClient) { }
   
+
+  updatePassedVar(PassedVar){
+      this._PassedVar = PassedVar;
+  }
+
+  getVar(){
+    return this._PassedVar;
+  }
+
 
   sendMail(body){
 
