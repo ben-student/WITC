@@ -8,6 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgxGlideModule } from 'ngx-glide';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,10 @@ import { NgxGlideModule } from 'ngx-glide';
     ReactiveFormsModule,
     HttpClientModule,
     NgxGlideModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatGridListModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
