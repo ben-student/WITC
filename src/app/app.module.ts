@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { LibraryComponent } from './library/library.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { LibraryComponent } from './library/library.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
+    
     
   ],
   providers: [],
