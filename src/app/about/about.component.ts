@@ -7,15 +7,34 @@ import { NgxGlideComponent } from 'ngx-glide';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
+  cols;
 
   constructor() { }
-  public play(){
-    this.ngxGlide.showBullets = false;
-    console.log("playing");
-  }
-  ngOnInit(): void {
   
+  ngOnInit(): void {
+    if(window.innerWidth > 0 && window.innerWidth < 768){
+      this.cols = 1;
+    }
+    if(window.innerWidth >= 768 && window.innerWidth < 1024){
+      this.cols = 2;
+    }
+    if(window.innerWidth >= 1024 ){
+      this.cols = 3;
+    }
+  }
+
+  onResize(event) {
+
+    if(event.target.innerWidth > 0 && event.target.innerWidth < 768){
+      this.cols = 1;
+    }
+    if(event.target.innerWidth >= 768 && event.target.innerWidth < 1024){
+      this.cols = 2;
+    }
+    if(event.target.innerWidth >= 1024){
+      this.cols = 3;
+    }
+   
   }
 
 

@@ -12,7 +12,7 @@
     <a class="btn btn-primary btn-lg" routerLink="/portfolio">See portfolio</a>
   </div> -->
 
-  <mat-grid-list cols="3" rowHeight="20em">
+  <mat-grid-list [cols]="cols" rowHeight="20em"   (window:resize)="onResize($event)">
     <mat-grid-tile><img src="assets/DAMPKAP1.jpg" alt="Dampkap appartement"/></mat-grid-tile>
     <mat-grid-tile><img src="assets/STOEL5.jpg" alt="design stoel"/></mat-grid-tile>
     <mat-grid-tile><img src="assets/VINYL1.jpg" alt="vinyl platenspeler"/></mat-grid-tile>
@@ -31,9 +31,12 @@
 
 <div class="cont">
   <div class="footer">
-    <i class="fab fa-instagram"></i>
-    <h3>Sam Dupont</h3>
-    <p>Sam.dupont2001@gmail.com</p>
+    
+    
+    <h2 >Sam Dupont</h2>
+    <span class="title-left">sam.dupont2001@gmail.com</span>
+    <a href="https://www.instagram.com/dupontwoodworks/" target="_blank" class="title-right"><i class="fa fa-instagram" style="font-size:36px"></i></a> 
+    <p class="cp">Copyright 2019-2020 by Dupont Ben. All Rights Reserved.</p>
   </div>
 </div>
 
