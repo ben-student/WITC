@@ -41,14 +41,14 @@
     - name: pull latest WITC image from dockerhub
       command: docker pull benstudent/witc:latest
 
-    - name: pull latest Backend image from dockerhub
-      command: docker pull benstudent/witc_backend:latest
+#    - name: pull latest Backend image from dockerhub
+#      command: docker pull benstudent/witc_backend:latest
 
     - name: run docker image WITC on port 80:80
-      command: docker run --name WITC --restart=always -d -p 80:80 benstudent/witc:latest
+      command: docker run --name WITC --restart=always -d --expose 80 --net nginx-proxy --env "VIRTUAL_HOST=samdupont.be" --env "LETSENCRYPT_host=samdupont.be"  benstudent/witc:latest
     
-    - name: run docker image Backend on port 3000:3000
-      command: docker run --name Backend --restart=always -d -p 3000:3000 benstudent/witc_backend:latest
+#    - name: run docker image Backend on port 3000:3000
+#      command: docker run --name Backend --restart=always -d -p 3000:3000 benstudent/witc_backend:latest
 
 
 
