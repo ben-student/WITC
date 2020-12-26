@@ -1,13 +1,8 @@
-// a {
-//     font-size: 2vw;
-//     font-family: 'Kanit', sans-serif;
-//     font-style: italic;
-//     color: white;
-// }
 
-$background: #eee;
+
+$background: #1E2640;
 $text-colour: rgb(253, 249, 239);
-$title-font: "Ubuntu", sans-serif;
+$title-font: "Kanit, italic";
 
 header {
   background-image: url("STOEL1.jpg") !important;
@@ -25,7 +20,7 @@ header {
 .navbar {
   height: 10vh;
   width: 100%;
-
+  font-family: 'Kanit', sans-serif!important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,13 +41,16 @@ header {
 .navbar > .navbar-header > .navbar-title {
   display: flex;
   align-items: center;
-  font-size: 48px;
+
 }
 
 .navbar > .navbar-header > .navbar-title > a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  
 }
 
 .navbar > .navbar-btn {
@@ -196,8 +194,8 @@ header {
 
 //  /* XL screen layout */
 @media (min-width: 1290px) {
-  .navbar {
-    padding-right: 250px;
-    padding-left: 250px;
-  }
+//   .navbar {
+//     padding-right: 250px;
+//     padding-left: 250px;
+//   }
 }

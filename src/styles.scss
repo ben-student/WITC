@@ -32,7 +32,11 @@ $witc-theme: mat-light-theme($witc-primary, $witc-accent, $witc-warn);
 @import '~@glidejs/glide/src/assets/sass/glide.theme';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+nav{
+    font-family: 'Kanit', sans-serif;
+}
+
+body { margin: 0; font-family: Ubuntu, sans-serif;}
 
 // nav{
 //     background-image: url("assets/STOEL1.jpg")!important;
