@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg  ">
+<Header>
+<!-- <nav class="navbar navbar-expand-lg  ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
         aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,9 +19,9 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <img [src]="logo" height="60" width="300" />
-            </li> -->
+            </li>
 
             <a class="navbar-brand" routerLink="/index" routerLinkActive="active">Dupont Woodworks</a>
 
@@ -29,4 +30,27 @@
         </ul>
 
     </div>
-</nav>
+</nav> -->
+
+<div class="navbar">
+    <div class="navbar-header">
+      <div class="navbar-title">
+        <a routerLink="index" ><span>DupontWoodWorks</span></a>
+      </div>
+    </div>
+    <div class="navbar-btn">
+      <label for="navbar-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <input type="checkbox" id="navbar-check">
+    <div class="navbar-links">
+        <a [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a>
+        <a [routerLink]="['/fff']" routerLinkActive="active">For friends and family</a>
+       
+    </div>
+  </div>
+
+</Header>

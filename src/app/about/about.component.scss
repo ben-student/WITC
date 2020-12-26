@@ -4,13 +4,22 @@
     bottom: 0; 
     width: 100%;
 }
-
+.banner{
+    padding-bottom: 2rem;
+    img{
+        width: 100%;
+    }
+}
 img {
     height: 100%;
     width: auto;
-    padding: 0.3em;
-    margin:1em;
+    padding:0em;
+    // margin:1em;
     
+}
+
+.container{
+    padding-top: 4rem;
 }
 
 
