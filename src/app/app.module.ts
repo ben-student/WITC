@@ -12,7 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { LibraryComponent } from './library/library.component';
-
+import { MatDialogModule} from '@angular/material/dialog';
+import { DialogProductComponent } from './dialog-product/dialog-product.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LibraryComponent } from './library/library.component';
     AboutComponent,
     PortfolioComponent,
     LibraryComponent,
+    DialogProductComponent,
 
   ],
   imports: [
@@ -32,6 +34,7 @@ import { LibraryComponent } from './library/library.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
+    MatDialogModule,
     
     
   ],

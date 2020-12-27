@@ -1,0 +1,19 @@
+img{
+    height: 100%;
+    width: auto;
+    
+}
+
+mat-grid-list{
+    height: 800px;
+    width:800px;
+    
+}
+
+mat-grid-tile{
+    padding: 0;
+    margin:0;
+}
+h1{
+    text-align: center;
+}

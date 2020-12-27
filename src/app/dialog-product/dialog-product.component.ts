@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MailServiceService } from '../mail-service.service';
-
-
 @Component({
-  selector: 'app-library',
-  templateUrl: './library.component.html',
-  styleUrls: ['./library.component.css']
+  selector: 'app-dialog-product',
+  templateUrl: './dialog-product.component.html',
+  styleUrls: ['./dialog-product.component.css']
 })
-export class LibraryComponent implements OnInit {
-
-  constructor(private ms : MailServiceService) { }
+export class DialogProductComponent implements OnInit {
+  cols;
+  constructor(private dialogRef: MatDialogRef<DialogProductComponent>,private ms : MailServiceService) { }
   images = [];
   product;
-  cols;
-  ngOnInit(): void {
 
-      
+  ngOnInit(): void {
 
     this.product = this.ms.product;
     for(let i = 0; i<8;i++){
@@ -33,9 +30,10 @@ export class LibraryComponent implements OnInit {
     if(window.innerWidth >= 1024 ){
       this.cols = 3;
     }
-      
+
   }
 
+  
   onResize(event) {
 
     if(event.target.innerWidth > 0 && event.target.innerWidth < 768){
@@ -49,5 +47,7 @@ export class LibraryComponent implements OnInit {
     }
    
   }
-
+  close(){
+    this.dialogRef.close()
+  }
 }

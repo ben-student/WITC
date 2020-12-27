@@ -1,0 +1,23 @@
+img {
+    height: 100%;
+    width: auto;
+    
+  
+    
+}
+
+.container{
+    padding-top: 5rem;
+    
+    
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+mat-grid-list{
+    margin-bottom: 2em;
+    height: 500px;
+}

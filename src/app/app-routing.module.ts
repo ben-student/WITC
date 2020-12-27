@@ -7,7 +7,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/portfolio' },
+  {path: '', pathMatch: 'full', redirectTo: '/portfolio' },
   {path : 'portfolio' , component : AboutComponent},
   {path : 'fff' , component : PortfolioComponent},
   {path : 'library' , component : LibraryComponent},

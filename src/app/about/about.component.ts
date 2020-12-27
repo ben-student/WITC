@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxGlideComponent } from 'ngx-glide';
-
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { DialogProductComponent } from '../dialog-product/dialog-product.component';
+import { MailServiceService } from '../mail-service.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -9,7 +12,7 @@ import { NgxGlideComponent } from 'ngx-glide';
 export class AboutComponent implements OnInit {
   cols;
 
-  constructor() { }
+  constructor(private dialog: MatDialog, private ms : MailServiceService,private router :Router) { }
   
   ngOnInit(): void {
     if(window.innerWidth > 0 && window.innerWidth < 768){
@@ -35,6 +38,16 @@ export class AboutComponent implements OnInit {
       this.cols = 3;
     }
    
+  }
+
+  openDialogProduct(product:string){
+    
+    console.log(product);
+    this.ms.product = product;
+    // const dialogConfig = new MatDialogConfig();
+    // const dialogRef = this.dialog.open(DialogProductComponent, dialogConfig);
+
+    this.router.navigate(['/library']);
   }
 
 
