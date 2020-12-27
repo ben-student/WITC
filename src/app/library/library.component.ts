@@ -5,7 +5,7 @@ import { MailServiceService } from '../mail-service.service';
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',
-  styleUrls: ['./library.component.css']
+  styleUrls: ['./library.component.scss']
 })
 export class LibraryComponent implements OnInit {
 
@@ -17,8 +17,8 @@ export class LibraryComponent implements OnInit {
 
       
 
-    this.product = this.ms.product;
-    for(let i = 0; i<8;i++){
+    this.product = this.ms.getProduct()
+    for(let i = 0; i<4;i++){
       this.images[i] = `assets/${this.product}${i+1}.jpg`;
       console.log(this.images[i]);
     }

@@ -2,21 +2,34 @@
 <body>
     
 
-<div class="container">
+
 
 <h1>{{product |lowercase}}</h1>
 
-<mat-grid-list [cols]="cols" rowHeight="20em"   (window:resize)="onResize($event)"> 
+<mat-carousel
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="accent"
+  maxWidth="auto"
+  proportion="100"
+  slides="5"
+  [loop]="true"
+  [hideArrows]="false"
+  [hideIndicators]="true"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of images; let i = index"
+    [image]="slide"
+    overlayColor="#00000040"
+    [hideOverlay]="false"
+  ></mat-carousel-slide>
+</mat-carousel>
 
-    <div *ngFor="let element of images">
-    
-    <mat-grid-tile>
-        <img [src]="element" alt="Dampkap appartement"/>
-    </mat-grid-tile>
-    </div>  
-   
-  </mat-grid-list> 
 
-</div>
 
 </body>

@@ -4,7 +4,7 @@ import { MailServiceService } from '../mail-service.service';
 @Component({
   selector: 'app-dialog-product',
   templateUrl: './dialog-product.component.html',
-  styleUrls: ['./dialog-product.component.css']
+  styleUrls: ['./dialog-product.component.scss']
 })
 export class DialogProductComponent implements OnInit {
   cols;
@@ -14,7 +14,7 @@ export class DialogProductComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.product = this.ms.product;
+    this.product = this.ms.getProduct();
     for(let i = 0; i<8;i++){
       this.images[i] = `assets/${this.product}${i+1}.jpg`;
       console.log(this.images[i]);

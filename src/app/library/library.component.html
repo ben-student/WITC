@@ -1,11 +1,11 @@
 <body>
-    
 
-    <div class="container">
-    
+
+  <div class="container">
+
     <h1>{{product |lowercase}}</h1>
-    
-    <mat-grid-list [cols]="cols" rowHeight="20em"   (window:resize)="onResize($event)"> 
+
+    <!-- <mat-grid-list [cols]="cols" rowHeight="20em"   (window:resize)="onResize($event)"> 
     
         <div *ngFor="let element of images">
         
@@ -16,6 +16,11 @@
        
       </mat-grid-list> 
     
-    </div>
-    
-    </body>
+    </div> -->
+
+    <mat-grid-list cols="2" rowHeight="2:1" >
+      <mat-grid-tile *ngFor="let element of images"><img [src]="element"></mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</body>

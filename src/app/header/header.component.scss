@@ -5,12 +5,26 @@ $text-colour: rgb(253, 249, 239);
 $title-font: "Kanit, italic";
 
 header {
-  background-image: url("STOEL1.jpg") !important;
-
+  background-image: url("VINYL4.jpg") !important;
   background-size: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
   height: 40vw;
+  
+}
+p,a {
+    font-size: 1rem;
+    color:white;
+    font-weight: 600;
+    
+   
 }
 
+
+.box-shadow{
+  box-shadow: 1px -2px 20px 15px #492e13;
+  height: 0px;
+}
 // .navbar-toggler-icon{
 
 //     border-radius: 10%;

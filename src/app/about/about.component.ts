@@ -43,11 +43,15 @@ export class AboutComponent implements OnInit {
   openDialogProduct(product:string){
     
     console.log(product);
-    this.ms.product = product;
-    // const dialogConfig = new MatDialogConfig();
-    // const dialogRef = this.dialog.open(DialogProductComponent, dialogConfig);
+    this.ms.storeProduct(product);
 
-    this.router.navigate(['/library']);
+    
+    const dialogRef = this.dialog.open(DialogProductComponent, {
+      height: '700px',
+      width: '600px'
+    });
+
+    // this.router.navigate(['/library']);
   }
 
 

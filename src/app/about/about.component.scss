@@ -38,9 +38,14 @@ mat-grid-list{
    
 }
 
-
-
+body{
+    box-shadow: 0 8px 16px 0 rgba(141, 110, 99, 1);
+    height: max-content;
+   
+}
 .container{
+
+    font-family: 'Mukta', sans-serif!important; 
     padding-top: 5rem;
     h2{
         text-align: center;
