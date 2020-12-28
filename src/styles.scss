@@ -7,13 +7,15 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+$custom-typography: mat-typography-config($font-family: '"Mukta", sans-serif;');
+@include mat-core($custom-typography);
+
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$witc-primary: mat-palette($mat-indigo);
-$witc-accent: mat-palette($mat-pink, A200, A100, A400);
+$witc-primary: mat-palette($mat-blue);
+$witc-accent: mat-palette($mat-brown, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $witc-warn: mat-palette($mat-red);
@@ -30,5 +32,18 @@ $witc-theme: mat-light-theme($witc-primary, $witc-accent, $witc-warn);
 @import "~bootstrap/scss/bootstrap.scss";
 @import '~@glidejs/glide/src/assets/sass/glide.core';
 @import '~@glidejs/glide/src/assets/sass/glide.theme';
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+nav{
+    font-family: 'Kanit', sans-serif;
+}
+
+body { margin: 0; font-family: Mukta, sans-serif;}
+
+// nav{
+//     background-image: url("assets/STOEL1.jpg")!important;
+    
+//     background-size: 100%;
+//     height: 80%;
+// }
+

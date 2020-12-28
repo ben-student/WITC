@@ -1,17 +1,215 @@
-a {
-    font-size: 1.4em;
-    font-family: 'Kanit', sans-serif;
-    font-style: italic;
-    color: white;
-}
 
-nav {
-    background-color: #1E2640;
+
+$background: #1E2640;
+$text-colour: rgb(253, 249, 239);
+$title-font: "Kanit, italic";
+
+header {
+  background-image: url("VINYL4.jpg") !important;
+  background-size: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  height: 40vw;
+  
+}
+p,a {
+    font-size: 1rem;
+    color:white;
+    font-weight: 600;
     
+   
 }
 
 
-.navbar-toggler-icon{
-    background-color: white;
-    border-radius: 10%;
+.box-shadow{
+  box-shadow: 1px -2px 20px 15px #492e13;
+  height: 0px;
+}
+// .navbar-toggler-icon{
+
+//     border-radius: 10%;
+// }
+
+/*#region Navbar*/
+.navbar {
+  height: 10vh;
+  width: 100%;
+  font-family: 'Kanit', sans-serif!important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+// .navbar img {
+//     height: 7vh;
+//     vertical-align: bottom;
+//     padding-right: .5rem;
+// }
+
+.navbar > .navbar-header {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.navbar > .navbar-header > .navbar-title {
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar > .navbar-header > .navbar-title > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  
+}
+
+.navbar > .navbar-btn {
+  display: none;
+}
+
+.navbar > .navbar-links > a {
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.navbar > .navbar-links > {
+  a {
+    &:hover {
+      text-decoration: underline  #e67300;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      color: $background;
+      cursor: pointer;
+    }
+
+    &:active {
+      text-decoration: underline #e67300;
+     
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
+
+
+}
+
+.navbar > #navbar-check {
+  display: none;
+}
+
+.navbar-title p {
+  display: inline-block;
+  box-sizing: border-box;
+}
+/*#endregion */
+
+/* Smartphone layout */
+@media (max-width: 480px) {
+  /*#region Navbar*/
+
+  .navbar > .navbar-header > .navbar-title {
+    font-size: 10vw;
+  }
+  .navbar img {
+    height: 12vw;
+  }
+  /*#endregion */
+}
+
+@media (max-width: 750px) {
+  /*#region Navbar*/
+  .navbar img {
+    padding: 5px;
+  }
+  .navbar > .navbar-btn {
+    display: block;
+  }
+  .navbar > .navbar-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .navbar > .navbar-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid $text-colour;
+  }
+  .navbar > .navbar-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: $background;
+    height: auto;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 10vh;
+    left: 0px;
+    z-index: 1;
+    font-size: 26px;
+  }
+  .navbar > .navbar-links > a {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar > #navbar-check:not(:checked) + .navbar-links {
+    height: 0px;
+  }
+  .navbar > #navbar-check:checked + .navbar-links {
+    height: calc(100vh - 10vh);
+    overflow-y: auto;
+    padding-top: 50px;
+  }
+  /*#endregion */
+}
+
+/* Laptop layout */
+@media (min-width: 751px) {
+  /*#region Navbar*/
+
+  .navbar > .navbar-links {
+    font-size: 20px;
+    justify-content: right;
+  }
+  .navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*#endregion */
+}
+
+@media (min-width: 901px) {
+  .navbar {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .navbar {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+//  /* XL screen layout */
+@media (min-width: 1290px) {
+//   .navbar {
+//     padding-right: 250px;
+//     padding-left: 250px;
+//   }
 }

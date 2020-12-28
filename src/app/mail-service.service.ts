@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
+const PRODUCTKEY = "product_key";
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class MailServiceService {
 
-
-  _PassedVar;
+  
+ 
   constructor(private _http : HttpClient) { }
   
 
-  updatePassedVar(PassedVar){
-      this._PassedVar = PassedVar;
+  
+  storeProduct(product){
+    window.localStorage.setItem(PRODUCTKEY,product)
   }
 
-  getVar(){
-    return this._PassedVar;
+  getProduct(){
+    return localStorage.getItem(PRODUCTKEY);
   }
-
 
   sendMail(body){
 
