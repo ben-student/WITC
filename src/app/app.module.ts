@@ -4,9 +4,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './about/about.component';
+import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AboutComponent } from './about/about.component';
 import { NgxGlideModule } from 'ngx-glide';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -22,8 +22,8 @@ import {MatChipsModule} from '@angular/material/chips';
   declarations: [
     AppComponent,
     HeaderComponent,
+    ProductComponent,
     AboutComponent,
-    PortfolioComponent,
     LibraryComponent,
     DialogProductComponent,
     FooterComponent,
