@@ -15,6 +15,8 @@ import { LibraryComponent } from './library/library.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DialogProductComponent } from './dialog-product/dialog-product.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { FooterComponent } from './footer/footer.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     PortfolioComponent,
     LibraryComponent,
     DialogProductComponent,
+    FooterComponent,
 
   ],
   imports: [
@@ -37,6 +40,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatGridListModule,
     MatDialogModule,
     MatCarouselModule.forRoot(),
+    MatChipsModule
     
     
   ],

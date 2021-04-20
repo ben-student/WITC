@@ -1,0 +1,21 @@
+.footer {
+  background-color: #1e2640;
+  padding: 2em;
+
+  color: white;
+  a {
+    color: white;
+  }
+  font-family: "Mukta", sans-serif !important;
+  .title-left {
+    display: inline;
+    font-size: 1.3em;
+  }
+
+  .title-right {
+    float: right;
+  }
+  .cp {
+    text-align: center;
+  }
+}

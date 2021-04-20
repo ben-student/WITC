@@ -7,7 +7,7 @@ import { MailServiceService } from '../mail-service.service';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  
+  laungageSelector: string;
   
   constructor(private cs : MailServiceService) {
 
@@ -15,9 +15,19 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.laungageSelector = "EN";
   }
 
-  
+  onDutch(){
+    this.laungageSelector = "NL";
+  }
+
+  onFrench(){
+    this.laungageSelector = "FR";
+  }
+
+  onEnglish(){
+    this.laungageSelector = "EN";
+  }
 
 }

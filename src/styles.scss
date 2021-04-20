@@ -18,7 +18,7 @@ $witc-primary: mat-palette($mat-blue);
 $witc-accent: mat-palette($mat-brown, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$witc-warn: mat-palette($mat-red);
+$witc-warn: mat-palette($mat-red, A200, A100, A400);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $witc-theme: mat-light-theme($witc-primary, $witc-accent, $witc-warn);
@@ -39,6 +39,7 @@ nav{
 }
 
 body { margin: 0; font-family: Mukta, sans-serif;}
+
 
 // nav{
 //     background-image: url("assets/STOEL1.jpg")!important;
