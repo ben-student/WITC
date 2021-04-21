@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: '/about' },
+  {path: '', pathMatch: 'full', redirectTo: '/product' },
   {path : 'product' , component : ProductComponent},
   {path : 'about' , component : AboutComponent},
   {path : 'library' , component : LibraryComponent},
