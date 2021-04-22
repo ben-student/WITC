@@ -10,6 +10,10 @@
 # dependencies
 /node_modules
 
+#my linux devops configuration files
+/linux_conf_files
+
+
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
