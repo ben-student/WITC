@@ -10,7 +10,7 @@
 # dependencies
 /node_modules
 
-#my linux devops configuration files
+# my linux devops configuration files
 /linux_conf_files
 
 
@@ -48,3 +48,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+node_modules
