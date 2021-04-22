@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxGlideComponent } from 'ngx-glide';
+
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { DialogProductComponent } from '../dialog-product/dialog-product.component';
 import { MailServiceService } from '../mail-service.service';

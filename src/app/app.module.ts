@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
-import { NgxGlideModule } from 'ngx-glide';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -34,7 +34,7 @@ import {MatChipsModule} from '@angular/material/chips';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxGlideModule,
+
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
