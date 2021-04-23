@@ -30,8 +30,8 @@ $witc-theme: mat-light-theme($witc-primary, $witc-accent, $witc-warn);
 
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
-@import '~@glidejs/glide/src/assets/sass/glide.core';
-@import '~@glidejs/glide/src/assets/sass/glide.theme';
+// @import '~@glidejs/glide/src/assets/sass/glide.core';
+// @import '~@glidejs/glide/src/assets/sass/glide.theme';
 
 html, body { height: 100%; }
 nav{
