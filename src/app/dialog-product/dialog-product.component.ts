@@ -51,6 +51,12 @@ export class DialogProductComponent implements OnInit {
         this.price = 'NA'
         this.nIMG = 14
         break;
+      case '20202-' : 
+        this.description = "This piece actually was not planned, A client was interested in piece #20181 but she wanted to put it against a slanted wall, wich would look weird. So i designed this piece wich has a more open top wich makes for a smoother coherence between the slanted wall and the closet. Made with high quality beech plywood and beech hardwood."
+        this.dimensions = "D40xL110xH145 (centimeters)"
+        this.price = '450'
+        this.nIMG = 14
+        break;  
       case '20203-' : 
         this.description = "This sidetable was a collaboration between myself and Zoë Engels (@zoeetpita on ig). She designed this piece for school and I helped her make it. We decided to take it into production as her school gave her the advice to do so. By buying this piece you support not one but two hardworking students."
         this.dimensions = "D40xL40xH50 (centimeters)"
