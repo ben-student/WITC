@@ -15,6 +15,7 @@ export class DialogProductComponent implements OnInit {
   nIMG:number;
   dimensions:string;
   price;
+  specification:string[];
   
   
   
@@ -27,12 +28,14 @@ export class DialogProductComponent implements OnInit {
       case '20171-' :
         this.description = "This was one of my earlier pieces, after a prototype I changed the design a bit and worked with other woods. I used the combination of Meranti plywood and hardwood. Fitted with soft close ball bearing drawer slides for a smooth and soothing motion. Treated with Rubio monocoat, a natural oil."
         this.dimensions = "D40xL45xH60 (centimeters)"
+        this.specification = ["-Meranti hardwood and Meranti plywood", "-Ball-bearing, soft-close drawer slides" , "-Treatment: Rubio monocoat"]
         this.price = 250
         this.nIMG = 9
         break;
       case '20181-' : 
         this.description = "A minimal open closet with two drawers. Made with MDF and Meranti hardwood. Curves are the main focus on this closet. I like curves because there is no machine that makes you perfect curves, it’s all about smoothing out the curves so they look perfect. "
         this.dimensions = "45xL180xH145 (centimeters)"
+        this.specification = ["-MDF", "-Ball-bearing, soft-close drawer slides" , "-Treatment: Rubio monocoat"]
         this.price = 'NA'
         this.nIMG = 9
         break;
