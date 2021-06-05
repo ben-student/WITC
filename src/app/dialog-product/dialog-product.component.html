@@ -33,6 +33,11 @@
 <p>{{description}}</p>
 <p>If you have questions about this piece or if you are interested in buying one or a set, feel free to mail me at Dupontwoodworks1@gmail.com with #{{product}} or send me a DM on Instagram (Dupontwoodworks)</p>
 <p>dimensions : {{dimensions}}</p>
+<div *ngFor="let element of specification">
+  <ul>
+    <li>{{element}}</li>
+  </ul>
+</div>
 <p>price : {{price}} €</p>
 <br>
 </body>
