@@ -4,7 +4,7 @@
 
 
 
-<h1>{{product |lowercase}}</h1>
+<h1>{{"#" + product |lowercase | slice:0:-1}}</h1>
 
 <mat-carousel
   timings="250ms ease-in"

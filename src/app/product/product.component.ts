@@ -47,8 +47,8 @@ export class ProductComponent implements OnInit {
 
     
     const dialogRef = this.dialog.open(DialogProductComponent, {
-      height: '700px',
-      width: '600px'
+      height: '900px',
+      width: '800px'
     });
 
     // this.router.navigate(['/library']);
