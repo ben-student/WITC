@@ -30,7 +30,7 @@ export class DialogProductComponent implements OnInit {
         this.dimensions = "D40xL45xH60 (centimeters)"
         this.specification = ["-Meranti hardwood and Meranti plywood", "-Ball-bearing, soft-close drawer slides" , "-Treatment: Rubio monocoat"]
         this.price = 300 + " (500 voor paar)"
-        this.nIMG = 6
+        this.nIMG = 15
         break;
       case '20181-' : 
         this.description = "A minimal open closet with two drawers. Made with MDF and Meranti hardwood. Curves are the main focus on this closet. I like curves because there is no machine that makes you perfect curves, it’s all about smoothing out the curves so they look perfect. "
